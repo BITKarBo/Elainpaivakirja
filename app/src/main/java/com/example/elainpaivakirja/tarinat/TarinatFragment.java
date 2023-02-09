@@ -1,4 +1,4 @@
-package com.example.elainpaivakirja.koti;
+package com.example.elainpaivakirja.tarinat;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,21 +10,21 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.elainpaivakirja.databinding.FragmentKotiBinding;
-public class KotiFragment extends Fragment {
+import com.example.elainpaivakirja.databinding.FragmentTarinatBinding;
+public class TarinatFragment extends Fragment {
 
-    private FragmentKotiBinding binding;
+    private FragmentTarinatBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        KotiViewModel kotiViewModel =
-                new ViewModelProvider(this).get(KotiViewModel.class);
+        TarinatViewModel tarinatViewModel =
+                new ViewModelProvider(this).get(TarinatViewModel.class);
 
-        binding = FragmentKotiBinding.inflate(inflater, container, false);
+        binding = FragmentTarinatBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textKoti;
-        kotiViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textTarinat;
+        tarinatViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
     @Override

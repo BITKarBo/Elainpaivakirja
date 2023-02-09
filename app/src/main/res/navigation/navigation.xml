@@ -2,14 +2,19 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    android:id="@+id/navigation"
+    app:startDestination="@id/nav_koti">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_koti"
         android:name="com.example.elainpaivakirja.koti.KotiFragment"
         android:label="KOTI"
         tools:layout="@layout/fragment_koti" />
+    <fragment
+        android:id="@+id/nav_tarinat"
+        android:name="com.example.elainpaivakirja.tarinat.TarinatFragment"
+        android:label="TARINAT"
+        tools:layout="@layout/fragment_tarinat" />
 
 
 </navigation>

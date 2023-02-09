@@ -6,14 +6,12 @@
     <group android:checkableBehavior="single">
         <!-- android:icon="" -->
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_koti"
             android:name="com.example.elainpaivakirja.koti.KotiFragment"
             android:title="Koti" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_tarinat"
+            android:name="com.example.elainpaivakirja.tarinat.TarinatFragment"
             android:title="Tarinat" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:title="Asetukset" />
     </group>
 </menu>

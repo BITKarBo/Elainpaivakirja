@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawerLayout">
+    android:id="@+id/drawerLayout"
+    tools:openDrawer="start">
+
 
 
 
@@ -19,7 +21,7 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/navigationMenu"
+        android:id="@+id/navigation"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:menu="@menu/menu_main"
