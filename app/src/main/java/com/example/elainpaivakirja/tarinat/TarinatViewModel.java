@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel;
 public class TarinatViewModel extends ViewModel {
 
     private final MutableLiveData<String> tarinatTexti;
-
+    private final MutableLiveData<String> imagePath = new MutableLiveData<>();
     public TarinatViewModel() {
         tarinatTexti = new MutableLiveData<>();
         tarinatTexti.setValue("Tämä on tarinat fragment");
