@@ -10,7 +10,6 @@ public class TarinatViewModel extends ViewModel {
     private final MutableLiveData<String> imagePath = new MutableLiveData<>();
     public TarinatViewModel() {
         tarinatTexti = new MutableLiveData<>();
-        tarinatTexti.setValue("Tämä on tarinat fragment");
     }
 
     public LiveData<String> getText() {

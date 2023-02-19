@@ -33,7 +33,7 @@ public class TarinatFragment extends Fragment {
     private int REQUEST_IMAGE_PICKER = 1;
     private int RESULT_OK = -1;
 
-    private String imagePath; // Instance variable to store the image path
+    private String imagePath;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -46,17 +46,15 @@ public class TarinatFragment extends Fragment {
 
         imageStory = root.findViewById(R.id.image_story);
         editTextStory = root.findViewById(R.id.edit_text_story);
-        textView = root.findViewById(R.id.text_tarinat);
+        textView = root.findViewById(R.id.text_Tarinat);
         buttonAddStory = root.findViewById(R.id.button_add_story);
         buttonAddPhoto = root.findViewById(R.id.button_add_photo);
 
         buttonAddStory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Get the story text
                 String story = editTextStory.getText().toString();
 
-                // Update the UI with the story and image
                 if (!story.isEmpty()) {
                     if (textView.getText().toString().isEmpty()) {
                         textView.setText(story);
@@ -80,14 +78,12 @@ public class TarinatFragment extends Fragment {
                 getImagePath();
             }
         });
-        //final TextView textView = binding.textTarinat;
         tarinatViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
 
     private void getImagePath() {
-        // Launch the image picker
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");
         startActivityForResult(intent, REQUEST_IMAGE_PICKER);
@@ -105,7 +101,6 @@ public class TarinatFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_IMAGE_PICKER && resultCode == RESULT_OK) {
-            // Get the image path
             Uri uri = data.getData();
             imagePath = uri.getPath();
         }
