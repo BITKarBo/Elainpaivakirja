@@ -21,8 +21,8 @@
 
     <TextView
         android:id="@+id/text_Tarinat"
-        android:layout_width="234dp"
-        android:layout_height="113dp"
+        android:layout_width="229dp"
+        android:layout_height="566dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"

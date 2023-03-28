@@ -1,5 +1,6 @@
 package com.example.elainpaivakirja;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -45,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onSupportNavigateUp() {
